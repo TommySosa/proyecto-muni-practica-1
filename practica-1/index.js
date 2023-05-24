@@ -6,11 +6,13 @@ const players = ['Messi', 'Di Maria', 'A. Gomez', 'De Paul', 'Pezzella', 'Almada
 
 
 const outstandingPlayers = outstandingScores.map(player => players[scores.indexOf(player)])
-//const outstandingPlayers = outstandingScores.map(index => scores.indexOf(index))
 
+const indices = outstandingScores.map(score => scores.indexOf(score))
 
-
-
+outstandingScores.forEach(() =>{
+    scores.sort((a,b) => b-a)
+    scores.splice(indices,1)
+})
 
 
 
@@ -19,3 +21,5 @@ const outstandingPlayers = outstandingScores.map(player => players[scores.indexO
 console.log('scores: ' + scores);
 console.log('outstandingScores: ' + outstandingScores);
 console.log(outstandingPlayers);
+console.log(indices);
+console.log('scores nuevos : ' + scores);
