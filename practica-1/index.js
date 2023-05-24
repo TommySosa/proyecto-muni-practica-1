@@ -13,6 +13,8 @@ outstandingScores.forEach(() =>{
     scores.sort((a,b) => b-a)
     scores.splice(indices,1)
 })
+ 
+const regularPlayers = players.filter((player, index) => indices.indexOf(index) === -1);
 
 
 
@@ -20,6 +22,7 @@ outstandingScores.forEach(() =>{
 
 console.log('scores: ' + scores);
 console.log('outstandingScores: ' + outstandingScores);
-console.log(outstandingPlayers);
+console.log('outstandingPlayers: ' + outstandingPlayers);
 console.log(indices);
 console.log('scores nuevos : ' + scores);
+console.log('regularPlayers: ' + regularPlayers);
